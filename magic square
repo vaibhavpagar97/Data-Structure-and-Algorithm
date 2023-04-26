@@ -5,8 +5,8 @@ import java.util.*;
 public class Magicsquare {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int arr[][] = { { 2, 7, 6 }, { 9, 5, 1 }, { 4, 3, 8 } };
+		Scanner sc = new Scanner(System.in);                      //declaration 
+		int arr[][] = { { 2, 7, 6 }, { 9, 5, 1 }, { 4, 3, 8 } };   //initialize 2d array
 		System.out.println("enter a number");
 		int target = sc.nextInt();
 
