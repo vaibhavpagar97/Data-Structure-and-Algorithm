@@ -1,12 +1,19 @@
-public class testing {
-	static int a = 0;
+package Day1_DSA;
+
+import java.util.*;
+
+public class Magicsquare {
 
 	public static void main(String[] args) {
-		// int[][] arr=new int[3][3];
+		Scanner sc = new Scanner(System.in);
 		int arr[][] = { { 2, 7, 6 }, { 9, 5, 1 }, { 4, 3, 8 } };
+		System.out.println("enter a number");
+		int target = sc.nextInt();
 
-		// int c=1;
+		
+		//add 3 row elements and check
 		for (int i = 0; i < i + 1 && i < 3; i++) {
+			int a = 0;
 			for (int j = 0; j < 3; j++) {
 				System.out.println(arr[i][j]);
 				a = a + arr[i][j];
@@ -19,8 +26,9 @@ public class testing {
 			} else {
 				System.out.println("false");
 			}
-
 		}
+		
+		//add 3 column elements and check
 		int l = 0;
 		for (int j = 0; j < j + 1 && j < 3; j++) {
 			for (int i = 0; i < 3; i++) {
@@ -35,7 +43,7 @@ public class testing {
 			}
 
 		}
-
+		// add diagonal elements and check
 		int b = 0;
 		for (int i = 0; i < 3; i++) {
 			b += arr[i][i];
@@ -47,6 +55,7 @@ public class testing {
 			System.out.println("false");
 		}
 
+		//Add diagonal elements
 		int d = 0;
 		for (int i = 0; i < 3; i++) {
 			d += arr[i][3 - i - 1];
