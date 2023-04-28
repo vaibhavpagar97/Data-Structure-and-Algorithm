@@ -1,0 +1,59 @@
+package DsaAss2;
+
+public class BinarySearchUsingLoop {
+
+	// Pre-condition for Binary Search: The array should be already in a sorted order
+	public static void main(String[] args) {
+		// declared a static integer array of length 10
+		int arr[] = {112, 120, 134, 156, 167, 168, 173, 176, 178, 189};
+		// calling the binary search method which returns the index of the search element
+		// the index is -1 of the element is not located at all
+		//System.out.println(new BinarySearchUsingLoop().binarySearch(899, arr));
+		BC(178);
+	}
+
+	static void BC(int a) {
+		int arr[] = {112, 120, 134, 156, 167, 168, 173, 176, 178, 189};
+		
+		for(int i = 0; i<10;i++) {
+			
+			if(a==i) {
+				System.out.println("present");
+			}
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	int binarySearch(int searchelement, int c[]) {
+		int indexofelement = -1;
+		
+	// left: for leftmost index location, right: right most index location, mid: is average of left & right
+		int left=0, right=c.length, mid=0, complexitycounter=0;   
+		while(left  < right) {  // continue iteration of the while loop till the left meets the right index
+			complexitycounter++;
+			mid = (left+right)/2;
+			if(searchelement > c[mid]) {  // the element being searched is compared with the mid element
+				left = mid + 1;
+			} else {
+				right = mid;
+			}
+			
+		}
+		
+		indexofelement = left;
+		System.out.println("complexity : "+complexitycounter);
+		return indexofelement;
+	}
+}
+
+
+
