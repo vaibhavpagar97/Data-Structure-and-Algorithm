@@ -1,0 +1,36 @@
+package Day6_DSA;
+
+public class LinkedList {
+	static class Node {
+		int data;
+		Node next;
+
+		public Node(int data) {
+			this.data = data;
+			// this.next=null;
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+		Node a = new Node(5);
+		Node b = new Node(8);
+		a.next = b;
+		Node temp = a;
+		for (int i = 0; i <= 1; i++) {
+			System.out.println(temp.data);
+			temp = temp.next;
+
+		}
+
+	}
+}
+
+take a one class for linked list
+take another one nested class, so that it can be access by 1st class
+then declare instance variables in nested class for data and address of next
+then take one constructor to get values of data
+and then in main class, create nodes and link it to the next node by using node.a=b;
+
+insertion deletion is remaining
